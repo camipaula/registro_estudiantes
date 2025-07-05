@@ -3,36 +3,41 @@
 import java.util.ArrayList;
 import java.util.List;
 
-<span class="fc" id="L6">public class StudentManager {</span>
-<span class="fc" id="L7">    private List&lt;Student&gt; students = new ArrayList();</span>
+/**
+ * Clase que gestiona el registro de estudiantes.
+ */
+<span class="fc" id="L9">public class StudentManager {</span>
 
-    public void addStudent(String name, double grade) {
-<span class="pc bpc" id="L10" title="1 of 4 branches missed.">        if (name == null || name.trim().isEmpty()) {</span>
-<span class="fc" id="L11">            System.out.println(&quot;Error: El nombre no puede estar vacío.&quot;);</span>
-<span class="fc" id="L12">            return;</span>
-        }
- 
-<span class="fc bfc" id="L15" title="All 4 branches covered.">        if (grade &lt; 0 || grade &gt; 100) {</span>
-<span class="fc" id="L16">            System.out.println(&quot;Error: La nota debe estar entre 0 y 100.&quot;);</span>
-<span class="fc" id="L17">            return;</span>
-        }
+<span class="fc" id="L11">  private List&lt;Student&gt; students = new ArrayList&lt;&gt;();</span>
 
-<span class="fc" id="L20">        Student student = new Student(name,grade);</span>
-<span class="fc" id="L21">        students.add(student);</span>
-<span class="fc" id="L22">        System.out.println(student.getName() + student.getGrade());</span>
+  /**
+   * Agrega un nuevo estudiante al registro.
+   * @param name Nombre del estudiante.
+   * @param grade Calificación del estudiante.
+   */
+  public void addStudent(String name, double grade) {
+<span class="pc bpc" id="L19" title="1 of 4 branches missed.">    if (name == null || name.trim().isEmpty()) {</span>
+<span class="fc" id="L20">      System.out.println(&quot;Error: El nombre no puede estar vacío.&quot;);</span>
+<span class="fc" id="L21">      return;</span>
+    }
 
-<span class="fc" id="L24">    }</span>
+<span class="fc bfc" id="L24" title="All 4 branches covered.">    if (grade &lt; 0 || grade &gt; 100) {</span>
+<span class="fc" id="L25">      System.out.println(&quot;Error: La nota debe estar entre 0 y 100.&quot;);</span>
+<span class="fc" id="L26">      return;</span>
+    }
 
-    public void listStudents() {
-<span class="nc bnc" id="L27" title="All 2 branches missed.">        for (Student student : students) {</span>
-<span class="nc" id="L28">            System.out.println(&quot;Estudiante: &quot; + student.getName() + &quot;, Nota: &quot; + student.getGrade());</span>
-<span class="nc" id="L29">        }</span>
-<span class="nc" id="L30">    }</span>
+<span class="fc" id="L29">    Student student = new Student(name, grade);</span>
+<span class="fc" id="L30">    students.add(student);</span>
+<span class="fc" id="L31">    System.out.println(&quot;Student added&quot;);</span>
+<span class="fc" id="L32">  }</span>
 
-    public static void main(String[] args) {
-<span class="nc" id="L33">        StudentManager studentManager = new StudentManager();</span>
-<span class="nc" id="L34">        studentManager.addStudent(&quot;John Doe&quot;, 85.5);</span>
-<span class="nc" id="L35">        studentManager.listStudents();</span>
-<span class="nc" id="L36">    }</span>
+  /**
+   * Muestra la lista de estudiantes registrados.
+   */
+  public void listStudents() {
+<span class="fc bfc" id="L38" title="All 2 branches covered.">    for (Student student : this.students) {</span>
+<span class="fc" id="L39">      System.out.println(student.toString());</span>
+<span class="fc" id="L40">    }</span>
+<span class="fc" id="L41">  }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

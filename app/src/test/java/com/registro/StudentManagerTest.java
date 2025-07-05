@@ -36,5 +36,8 @@ public class StudentManagerTest {
         studentManager.addStudent("Lucia",8.0);
         studentManager.listStudents();
     }
-
+    @Test
+    public void testMain() {
+        Main.main(new String[]{});
+    }
 }

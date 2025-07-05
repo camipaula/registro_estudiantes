@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.registro.StudentManagerTest" time="0.173" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.registro.StudentManagerTest" time="0.167" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -11,7 +11,7 @@
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/local/sdkman/candidates/java/21.0.7-ms/lib"/>
-    <property name="sun.java.command" value="/workspaces/registro_estudiantes/app/target/surefire/surefirebooter-20250705185242158_3.jar /workspaces/registro_estudiantes/app/target/surefire 2025-07-05T18-52-42_060-jvmRun1 surefire-20250705185242158_1tmp surefire_0-20250705185242158_2tmp"/>
+    <property name="sun.java.command" value="/workspaces/registro_estudiantes/app/target/surefire/surefirebooter-20250705193430711_3.jar /workspaces/registro_estudiantes/app/target/surefire 2025-07-05T19-34-30_592-jvmRun1 surefire-20250705193430711_1tmp surefire_0-20250705193430711_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/workspaces/registro_estudiantes/app/target/test-classes:/workspaces/registro_estudiantes/app/target/classes:/home/codespace/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/codespace/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -26,7 +26,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/workspaces/registro_estudiantes/app/target/surefire/surefirebooter-20250705185242158_3.jar"/>
+    <property name="surefire.real.class.path" value="/workspaces/registro_estudiantes/app/target/surefire/surefirebooter-20250705193430711_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.7+6-LTS"/>
     <property name="user.name" value="codespace"/>
@@ -53,18 +53,23 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testAddStudentWithInvalidGrade" classname="com.registro.StudentManagerTest" time="0.044">
+  <testcase name="testAddStudentWithInvalidGrade" classname="com.registro.StudentManagerTest" time="0.022">
     <system-out><![CDATA[Error: La nota debe estar entre 0 y 100.
 Error: La nota debe estar entre 0 y 100.
 Student added
 Student: Lucia, Grade:8.0
 ]]></system-out>
   </testcase>
+  <testcase name="testMain" classname="com.registro.StudentManagerTest" time="0.007">
+    <system-out><![CDATA[Student added
+Student: John Doe, Grade:85.5
+]]></system-out>
+  </testcase>
   <testcase name="testAddStudentWithInvalidName" classname="com.registro.StudentManagerTest" time="0.001">
     <system-out><![CDATA[Error: El nombre no puede estar vacío.
 ]]></system-out>
   </testcase>
-  <testcase name="testAddValidStudent" classname="com.registro.StudentManagerTest" time="0.006">
+  <testcase name="testAddValidStudent" classname="com.registro.StudentManagerTest" time="0">
     <system-out><![CDATA[Student added
 Student: Bob, Grade:75.0
 ]]></system-out>

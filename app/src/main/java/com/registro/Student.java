@@ -1,24 +1,29 @@
 package com.registro;
 
-public class Student{
-    private String name;
-    private double grade;
+/**
+ * Representa un estudiante con nombre y calificación.
+ */
+public class Student {
 
-    public Student(String name, double grade){
-        this.name = name;
-        this.grade = grade;
-    }
+  private String name;
+  private double grade;
 
-    public String getName(){
-        return this.name;
-    }
+  /**
+   * Constructor de Student.
+   * @param name Nombre del estudiante.
+   * @param grade Calificación del estudiante.
+   */
+  public Student(String name, double grade) {
+    this.name = name;
+    this.grade = grade;
+  }
 
-    public double getGrade(){
-        return this.grade;
-    }
-
-    @Override
-    public String toString(){
-        return "Student: " + name + ", Grade:" + grade;
-    }
+  /**
+   * Representación en texto del estudiante.
+   * @return Cadena descriptiva del estudiante.
+   */
+  @Override
+  public String toString() {
+    return "Student: " + name + ", Grade:" + grade;
+  }
 }
