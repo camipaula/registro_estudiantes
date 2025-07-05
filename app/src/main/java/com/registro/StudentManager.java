@@ -19,13 +19,13 @@ public class StudentManager {
 
         Student student = new Student(name,grade);
         students.add(student);
-        System.out.println(student.getName() + student.getGrade());
+        System.out.println("Student added");
 
     }
 
     public void listStudents() {
-        for (Student student : students) {
-            System.out.println("Estudiante: " + student.getName() + ", Nota: " + student.getGrade());
+        for (Student student : this.students) {
+            System.out.println(student.toString());
         }
     }
 

@@ -1,38 +1,40 @@
 package com.registro;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import com.registro.StudentManager;
+import org.junit.Before;
+import org.junit.Test;
+ 
+import java.util.List;
+ 
+import static org.junit.Assert.*;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
+public class StudentManagerTest {
+ 
+    private StudentManager studentManager;
+ 
+    @Before
+    public void setUp() {
+        studentManager = new StudentManager();
+    }
+ 
+    @Test
+    public void testAddValidStudent() {
+        studentManager.addStudent("Bob", 75.0);
+        studentManager.listStudents();
+    }
+ 
+    @Test
+    public void testAddStudentWithInvalidName() {
+        studentManager.addStudent("", 85.0);
+        studentManager.listStudents();
+    }
+ 
+    @Test
+    public void testAddStudentWithInvalidGrade() {
+        studentManager.addStudent("Carlos", -5.0);
+        studentManager.addStudent("Diana", 110.0);
+        studentManager.addStudent("Lucia",8.0);
+        studentManager.listStudents();
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
 }
