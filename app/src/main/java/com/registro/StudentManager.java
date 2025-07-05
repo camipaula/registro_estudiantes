@@ -24,14 +24,14 @@ public class StudentManager {
     }
 
     public void listStudents() {
-        for (Student s : students) {
-            System.out.println("Estudiante: " + s.getName() + ", Nota: " + s.getGrade());
+        for (Student student : students) {
+            System.out.println("Estudiante: " + student.getName() + ", Nota: " + student.getGrade());
         }
     }
 
     public static void main(String[] args) {
-        StudentManager sm = new StudentManager();
-        sm.addStudent("John Doe", 85.5);
-        sm.listStudents();
+        StudentManager studentManager = new StudentManager();
+        studentManager.addStudent("John Doe", 85.5);
+        studentManager.listStudents();
     }
 }
