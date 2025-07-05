@@ -41,6 +41,7 @@ jobs:
       # Paso 3: Compila el proyecto Java y genera el HTML.
       # Este paso produce el contenido que se mostrará en GitHub Pages
       - name: Compile and generate HTML
+        working-directory: ./app
         run: | 
           mvn compile
           mvn exec:java -Dexec.mainClass="com.registro.Main"
