@@ -49,6 +49,7 @@ jobs:
       # Paso 4: Corre el checkstyle y copia el reporte generado
       # Este paso produce el contenido que se mostrará en GitHub Pages
       - name: Run checkstyle and copy the report
+        working-directory: ./app
         run: |
           mvn checkstyle:checkstyle
           cp -r target/site/* output/
@@ -56,6 +57,7 @@ jobs:
       # Paso 5: Corre el Jacoco y copia el reporte generado
       # Este paso produce el contenido que se mostrará en GitHub Pages
       - name: Run Jacoco and copy the report
+        working-directory: ./app
         run: |
           mvn jacoco:report
           cp -r target/site/* output/
@@ -63,6 +65,7 @@ jobs:
       # Paso 6: Corre el pmd y copia el reporte generado
       # Este paso produce el contenido que se mostrará en GitHub Pages
       - name: Run pmd and copy the report
+        working-directory: ./app
         run: |
           mvn pmd:check
           cp -r target/site/* output/
