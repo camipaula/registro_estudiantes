@@ -4,14 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentManager {
-    // private List students = new ArrayList<>();
-    // private List grades = new ArrayList<>();
     private List<Student> students = new ArrayList();
 
     public void addStudent(String name, double grade) {
-        // students.add(s);
-        // grades.add(g);
-        // System.out.println("Student added.");
+        if (name == null || name.trim().isEmpty()) {
+            System.out.println("Error: El nombre no puede estar vacío.");
+            return;
+        }
+ 
+        if (grade < 0 || grade > 100) {
+            System.out.println("Error: La nota debe estar entre 0 y 100.");
+            return;
+        }
+
         Student student = new Student(name,grade);
         students.add(student);
         System.out.println(student.getName() + student.getGrade());
@@ -19,8 +24,8 @@ public class StudentManager {
     }
 
     public void listStudents() {
-        for (int i = 0; i < students.size(); i++) {
-            System.out.println("Student: " + students.get(i) + ", Grade: " + grades.get(i));
+        for (Student s : students) {
+            System.out.println("Estudiante: " + s.getName() + ", Nota: " + s.getGrade());
         }
     }
 
