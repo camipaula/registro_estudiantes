@@ -1,3 +1,5 @@
+package com.registro;
+
 public class Student{
     private String name;
     private double grade;
@@ -13,5 +15,10 @@ public class Student{
 
     public double getGrade(){
         return this.grade;
+    }
+
+    @Override
+    public String toString(){
+        return "Student: " + name + ", Grade:" + grade;
     }
 }
